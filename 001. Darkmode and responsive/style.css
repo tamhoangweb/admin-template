@@ -1,0 +1,125 @@
+:root {
+  --primary-color: #4834d4;
+  --success-color: #6ab04c;
+  --warning-color: #f0932b;
+  --danger-color: #eb4d4b;
+
+  --light-color: #212529;
+  --light-second-color: #727475;
+  --light-bg: #fff;
+  --light-second-bg: #f1f1f1;
+
+  --dark-color: #909090;
+  --dark-second-color: #f5f6fa;
+  --dark-bg: #23242d;
+  --dark-second-bg: #181818;
+
+  --main-bg-color: var(--light-bg);
+  --second-bg-color: var(--light-second-bg);
+  --main-color: var(--light-color);
+  --second-color: var(--light-second-color);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  background: var(--main-bg-color);
+  color: var(--main-color);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  background: var(--main-bg-color);
+  color: var(--main-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  box-shadow: 0px 1px 4px 1px rgba(0,0,0,.12);
+}
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-link{
+  color: var(--second-color);
+  font-size: 17px;
+  text-align: center;
+  display: inline-block;
+  padding: 21px 10px;
+
+  /* để navbar-badge position absolute*/
+  position: relative;
+}
+.nav-link:hover{
+  cursor: pointer;
+}
+.navbar-nav i{
+  font-size: 1.4rem;
+}
+.navbar-nav.nav-right{
+  margin-left: auto;
+}
+.navbar-search{
+  position: relative;
+  width: 50%;
+  margin: auto;
+}
+.navbar-search input {
+  color: var(--main-color);
+  padding: 12px 30px;
+  width: 100%;
+  background: var(--second-bg-color);
+
+  outline: none;
+  border: none;
+  border-radius: 20px;
+}
+.navbar-search i{
+  color: var(--main-color);
+  cursor:pointer;
+  
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.logo {
+  height: 60px;
+  padding: 10px;
+}
+.avt {
+  padding: 10px;
+}
+.avt img{
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.navbar-badge {
+  font-size: .6rem;
+  padding: 3px 4px;
+
+  position: absolute;
+  right: 5px;
+  top: 9px;
+  
+  color: #fff;
+  background-color: var(--danger-color);
+  border-radius: 50%;
+}
